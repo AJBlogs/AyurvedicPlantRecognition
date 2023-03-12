@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <!-- <link rel="stylesheet" href=""> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css">
+    {% block css %}{% endblock %}
+</head>
+
+<body class="bg-transparent">
+    <nav class="bg-transparent top-0 z-50 w-full fixed">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="{% url 'index' %}" class="text-gray-900 font-bold text-xl">Ayurvedic Plants Recognition</a>
+                </div>
+                <div class="flex-1 text-right">
+                    <a href="{% url 'index' %}" class="text-gray-700 font-medium mr-3">Home</a>
+                    <a href="#" class="text-gray-700 font-medium mr-3">About</a>
+                    <a href="{% url 'contact_us' %}" class="text-gray-700 font-medium mr-3">Contact</a>
+                    <a href="{% url 'login' %}" class="px-4 py-2 font-medium text-white bg-green-500 rounded-md">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+        {% block content %}{% endblock %}
+    
+        <footer class="bg-gray-800 text-white py-4 px-6 fixed bottom-0 w-full">
+            <div class="container mx-auto text-center">
+              <p class="text-sm">&copy; 2023 Ayurvedic Plants Recognition. All rights reserved.</p>
+            </div>
+        
+          
+                            
+                                <div class="container mx-auto px-2 py-">
+                                    <div class="flex justify-center items-center">
+                                        <div class="mr-6">
+                                            <a href="#" class="text-lg font-semibold text-white-700 hover:text-gray-900">Terms</a>
+                                        </div>
+                                        <div class="mr-6">
+                                            <a href="#" class="text-lg font-semibold text-white-700 hover:text-gray-900">Privacy</a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="text-lg font-semibold text-white-700 hover:text-gray-900">FAQ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </footer>
+                            {% block js %}{% endblock %}
+                            </body>
+                        </html>
+                            
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
